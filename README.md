@@ -1,24 +1,50 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version: 2.7.3
 
-Things you may want to cover:
+* System dependencies: PostgreSQL
 
-* Ruby version
+# Setup
+1. run `rails db:setup`
+2. run `rails s` to start the server
 
-* System dependencies
+# General Info
+* Simple Journal Management app with Entries
 
-* Configuration
+# Endpoints:
+`Note: Journal has endpoints for both API and Front-end. For API endpoints use ones ending with '.json'`
+## `Journal:`
+* GET /journals or /journals.json
+* GET /journals/1 or /journals/1.json
+* GET /journals/new
+* GET /journals/1/edit
+* POST /journals or /journals.json
+* PATCH/PUT /journals/1 or /journals/1.json
+* DELETE /journals/1 or /journals/1.json
 
-* Database creation
+## `Entries:`
+* GET /journals/:journal_id/entries
+* GET /journals/:journal_id/entries/:id
+* POST /journals/:journal_id/entries
+* PATCH/PUT /journals/:journal_id/entries/:id
+* DELETE /journals//:journal_id/entries/:id
 
-* Database initialization
+## Tools to test the endpoints: `Postman` or similar
 
-* How to run the test suite
+# Optional Questions:
 
-* Services (job queues, cache servers, search engines, etc.)
+### What's your evaluation of this exercise? Is it a reasonable and valuable skills test? Like it, hate it?
+I really loved it. This exercise was very valuable and quite reasonable.
 
-* Deployment instructions
+### What features and endpoints would need to be introduced to make this an actual minimally viable product for maintaining and publishing journals?
+We atleast need a user sign-up and sign-in feature so users can maintain their journals.
 
-* ...
+### What concerns would need to be addressed if this MVP were publicly available?
+No authentication or authorization is required so the data can be changed by anyone.
+
+### Persist to storage via DB, etc to survive restarts
+Done
+
+### Include a simple frontend for viewing existing journals and entries
+Added a simple frontend for Journals only.
+
